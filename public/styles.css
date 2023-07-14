@@ -173,11 +173,40 @@ button{
 }
 
 @media screen and (max-width:320px){
+    .button{
+        position: relative;
+        padding-block: var(--lg-spacer);
+    }
+    input{
+        width:60px;
+    }
+    button{
+        position:absolute;
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    .test h2{
+        font-size: 1.8rem!important;
+    }
+    .calculator--form form{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:220px){
     .calculator--form form{
         flex-direction: column;
     }
     .test h2{
-        font-size: 1.8rem!important;
+        font-size: 1rem;
+    }
+    .content{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--xxs-spacer);
     }
 }
 
