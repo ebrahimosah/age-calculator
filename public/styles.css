@@ -102,7 +102,11 @@ input{
     font-size:1rem;
     border: 1px solid var(--offWhite);
     padding:var(--xxs-spacer);
-    font-weight: var(--sm-fw);
+    font-weight: var(--md-fw);
+    border-radius: var(--sm-br);
+}
+input:hover,input:focus{
+    border: 1px solid var(--purple);
 }
 input::placeholder{
     font-weight: var(--md-fw);
@@ -113,6 +117,14 @@ button{
     background: var(--purple);
     border: none;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon{
+    stroke:var(--offWhite);
+}
+button:hover{
+    background: var(--offBlack);
 }
 
 
@@ -208,6 +220,10 @@ button{
         flex-direction: column;
         gap: var(--xxs-spacer);
     }
+}
+
+.error{
+    color:rgb(240, 57, 57)!important;
 }
 
 
