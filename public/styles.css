@@ -18,6 +18,7 @@
     font-family: 'CustomFont';
     src: url('./assets/fonts/Poppins-Italic.ttf') format("truetype");
     font-style: italic;
+    font-weight: 100;
 }
 @font-face{
     font-family: 'CustomFont';
@@ -105,8 +106,8 @@ input{
     font-weight: var(--md-fw);
     border-radius: var(--sm-br);
 }
-input:hover,input:focus{
-    border: 1px solid var(--purple);
+input:focus{
+    border: 2px solid var(--purple);
 }
 input::placeholder{
     font-weight: var(--md-fw);
@@ -161,6 +162,7 @@ button:hover{
     font-size: 3rem;
     font-family: 'CustomFont', sans-serif;
     font-style: italic;
+    line-height: 1;
 }
 
 .dash {
@@ -223,7 +225,12 @@ button:hover{
 }
 
 .error{
-    color:rgb(240, 57, 57)!important;
+    border:1px solid rgb(240, 57, 57)!important;
+    
+}
+
+.error-text{
+    color: rgb(240, 57, 57);
 }
 
 
@@ -237,7 +244,10 @@ button:hover{
 
 
 span{
-    color:rgb(243, 30, 30);
+    color:rgb(240, 57, 57);
+    font-size: 8px;
+    width:100%;
+    /* background: black; */
 }
 
 
