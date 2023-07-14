@@ -1,0 +1,199 @@
+@import url("https://fonts.google.com/specimen/Poppins");
+
+@font-face{
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/Poppins-Bold.ttf') format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/Poppins-BoldItalic.ttf') format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/Poppins-Italic.ttf') format("truetype");
+    font-style: italic;
+}
+@font-face{
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format("truetype");
+    font-style: italic;
+}
+@font-face{
+    font-family: 'CustomFont';
+    src: url('./assets/fonts/Poppins-Regular.ttf') format("truetype");
+    font-weight:normal;
+    font-style: normal;
+}
+
+
+
+
+:root{
+    --purple: hsl(259, 100%, 65%);
+    --lightRed:hsl(0, 100%, 67%);
+    --white:hsl(0, 0%, 100%);
+    --offWhite:hsl(0, 0%, 94%);
+    --lightGrey:hsl(0, 0%, 86%);
+    --smokeGrey:hsl(0, 1%, 44%);
+    --offBlack:hsl(0, 0%, 8%);
+
+    --xxs-spacer:5px;
+    --xs-spacer:10px;
+    --sm-spacer:15px;
+    --md-spacer:25px;
+    --lg-spacer:35px;
+    --xl-spacer:50px;
+
+    --sm-br:5px;
+    --md-br:10px;
+    --lg-br:80px;
+
+    --sm-fw:400;
+    --md-fw:700;
+    --lg-fw:900;
+}
+
+
+.flow > * + * {
+    margin-top: var(--xs-spacer);       
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: var(--lightGrey);
+    font-family: 'CustomFont', sans-serif;
+}
+
+main{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.calculator--form form{
+    display: flex;
+    gap:var(--xxs-spacer);
+}
+form div{
+    display:flex;
+    flex-direction: column;
+    gap:var(--xxs-spacer);
+}
+label{
+    text-transform:uppercase;
+    font-size: .8rem;
+    color:var(--smokeGrey);
+}
+input{
+    width:80px;
+    outline: none;
+    font-size:1rem;
+    border: 1px solid var(--offWhite);
+    padding:var(--xxs-spacer);
+    font-weight: var(--sm-fw);
+}
+input::placeholder{
+    font-weight: var(--md-fw);
+    color: var(--smokeGrey);
+}
+
+button{
+    background: var(--purple);
+    border: none;
+    border-radius: 50%;
+}
+
+
+
+.button{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left:auto;
+}
+
+.line{
+    width:100%;
+    background: var(--offWhite);
+    height: .1px;
+}
+
+
+.calculator{
+    background: var(--white);
+    color:var(--offBlack);
+    max-width: 400px;
+    width: 400px;
+    padding:var(--md-spacer);
+    margin:0 auto;
+    border-radius: var(--md-br) var(--md-br) var(--lg-br) var(--md-br);
+}
+.test{
+    display:flex;
+    align-items: center;
+}
+.test h2{
+    font-size: 3rem;
+    font-family: 'CustomFont', sans-serif;
+    font-style: italic;
+}
+
+.dash {
+    display:flex;
+    padding-inline:10px;
+    align-items: center;
+    gap:10px;
+}
+.dash > div{
+    width:20px;
+    height:7px;
+    background-color: var(--purple);
+    transform:skewX(-10deg);
+}
+
+
+@media screen and (max-width:430px){
+    .calculator{
+        width:90vw;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:320px){
+    .calculator--form form{
+        flex-direction: column;
+    }
+    .test h2{
+        font-size: 1.8rem!important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+span{
+    color:rgb(243, 30, 30);
+}
+
+
+
